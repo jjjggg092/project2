@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href={{ url_for ('static', filename='styles.css') }}>
+    <link rel="shortcut icon" href="#">
+    <title>Flack!</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="sidenav">
+      <h2 id="flack" >Flak!</a>
+      <h2 id="name" ></h2>
+
+      <h3 id="sec" style="display: inline;">Chanels    </h3>
+      <button type="button" name="button" class="add"><span class="tooltiptext">Create new chanel</span></button>
+      <div class="create-chanel">
+        <form class="form-inline" action="{{ url_for('chanel') }}" method="post">
+          <div class="form-group">
+            <input type="text" name="chanel" class="form-control mb-2 mr-sm-2" id="exampleInputName2" placeholder="Name" style="width: 120px;">
+          </div>
+          <button type="submit" class="btn btn-secondary">Create</button>
+        </form>
+      </div>
+      <p style="display: block;">{{ message }}</p>
+      <div class="chanels">
+        <ul>
+          {% for chanel in chanels %}
+            <li><a href="" class='chanel' data-chanel='{{ chanel }}'>{{ chanel }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="main">
+        <h3 class="chanel-name">  </h3>
+      <div class="chat">
+        <div class="contein">
+        </div>
+
+
+
+    <div class="message-box">
+      <div class="box">
+        <form id ='new-message' style='display:inline;'>
+          <input id = 'send-message' autocomplete="off" type="text" placeholder="Write your message" style='width: 500px; "display: inline;'>
+          <button id = 'send' type="submit" > </button>
+        </form>
+        <button class="emoji">
+          <span class="icon-smile"></span>
+        </button>
+        <div class="emoji-box">
+          <span onclick="add(document.getElementsByClassName('icon-pacman')[0].value)" class="icon-pacman"></span>
+          <span onclick="add(document.getElementsByClassName('icon-smile')[0].value)" class="icon-smile"></span>
+          <span onclick="add(document.getElementsByClassName('icon-sad')[0].value)" class="icon-sad"></span>
+          <span onclick="add(document.getElementsByClassName('icon-evil')[0].value)" class="icon-evil"></span>
+          <span onclick="add(document.getElementsByClassName('icon-shocked')[0].value)" class="icon-shocked"></span>
+          <span onclick="add(document.getElementsByClassName('icon-happy')[0].value')" class="icon-happy"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for ('static', filename='scripts.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </body>
+</html>

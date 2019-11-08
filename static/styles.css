@@ -1,0 +1,308 @@
+@font-face {
+  font-family: 'emoj';
+  src:  url('fonts/emoj.eot?4veyc0');
+  src:  url('fonts/emoj.eot?4veyc0#iefix') format('embedded-opentype'),
+    url('fonts/emoj.ttf?4veyc0') format('truetype'),
+    url('fonts/emoj.woff?4veyc0') format('woff'),
+    url('fonts/emoj.svg?4veyc0#emoj') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'emoj' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pacman:before {
+  content: "\e916";
+}
+.icon-smile:before {
+  content: "\e9e1";
+}
+.icon-sad:before {
+  content: "\e9e5";
+}
+.icon-happy:before {
+  content: "\e9e9";
+}
+.icon-evil:before {
+  content: "\e9ef";
+}
+.icon-shocked:before {
+  content: "\e9f1";
+}
+
+
+body {
+  font-family: "Lato", sans-serif;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 18%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 20px;
+  padding: 15px;
+}
+.sidenav::-webkit-scrollbar, .users::-webkit-scrollbar, .chanels::-webkit-scrollbar, .private::-webkit-scrollbar {
+    display: none;
+}
+
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+
+}
+.chat{
+  margin-left: 50px; /* Same as the width of the sidenav */
+  margin-top: 50px;
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  height:77%;
+  width: 1000px;
+  overflow:scroll;
+  position: fixed;
+  float: right;
+    overflow-x: hidden;
+  max-width: 800px;
+  top: 0;
+  right: 0;
+
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.message-box {
+     position: fixed;
+     bottom: 0px;
+     right: 0px;
+     font-size: 25px;
+     padding: 25px;
+     background-color: #9392a4;
+     display: flex;
+     width: 82%;
+   }
+
+
+.box{
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+ul{
+  list-style: '#  ';
+}
+ .chanels {
+  width: auto;
+  margin: 10px;
+  padding: 5px;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.tooltiptext{
+  font-size: 10px;
+}
+.add .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.add:hover .tooltiptext {
+  visibility: visible;
+}
+.chanels{
+  height: 500px;
+}
+
+.chanels:hover{
+  -webkit-box-shadow: inset 0px 0px 39px -6px rgba(69,124,214,1);
+  -moz-box-shadow: inset 0px 0px 39px -6px rgba(69,124,214,1);
+  box-shadow: inset 0px 0px 39px -6px rgba(69,124,214,1);
+}
+#chanel:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #807e7e, 0 0 7px #585881;
+}
+#send{
+  background-color: rgb(159, 159, 159);
+  background-repeat:no-repeat;
+  background-image: url('send.jpg');
+  background-position: center;
+  background-size: 35px;
+  display: inline;
+  width: 60px;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  text-decoration: none;
+  border-radius: 15px;
+  height: 40px;
+}
+#send:hover{
+  -webkit-box-shadow: 5x 5x 8px 0px rgba(50, 83, 121, 0.75);
+  -moz-box-shadow: 5x 5x 8px 0px rgba(50, 83, 121, 0.75);
+  box-shadow: 5x 5x 8px 0px rgba(50, 83, 121, 0.75);
+  color: rgb(255, 255, 255);
+  background-color: rgb(28, 133, 156);
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+#send-message{
+  border-radius: 10px;
+}
+#flack {
+  text-align: center;
+  color: #ffffff;
+}
+#flack:hover{
+  text-shadow: 0 0 3px #e79393, 0 0 5px #7878d1;
+}
+#name:hover{
+ text-shadow: 0 0 5px #807e7e, 0 0 7px #585881;
+}
+#name{
+  color: #ffffff;
+}
+
+.msg {
+  border: 2px solid #dedede;
+  background-color: #635959;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 15px;
+  width: 700px;
+  position: center;
+}
+
+
+.darker {
+  border-color: #ccc;
+  background-color: #635959;
+}
+
+.msg::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.msg img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.msg img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.chanel-name{
+  width: 100%;
+  background-color: rgb(56, 59, 69);
+  color: rgb(205, 205, 205);
+  padding: 5px;
+  position: fixed;
+  margin-left: 100px;
+  top: 0;
+  text-align: center;
+}
+
+.create-chanel {
+  display: None;
+}
+
+.add{
+  background-size: 20px 20px;
+  background-color: rgb(255, 255, 255);
+  height: 25px;
+  width: 25px;
+  position:absolute;
+  transition: .5s ease;
+  top: calc(50% - XYpx);
+  left: calc(50% - XYpx);
+  display: inline-block;
+  margin-left: 45px;
+  border-radius: 5px;
+  background-image: url("plus.png");
+}
+.emoji-box{
+  display: none;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  background-color: #9298a1;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  bottom: 100%;
+  left: 68%;
+  margin-left: -60px;
+}
